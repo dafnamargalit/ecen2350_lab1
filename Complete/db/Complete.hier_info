@@ -1,0 +1,278 @@
+|Complete
+ADC_CLK_10 => ~NO_FANOUT~
+MAX10_CLK1_50 => ~NO_FANOUT~
+MAX10_CLK2_50 => ~NO_FANOUT~
+HEX0[0] << Birthdays:birthyay.HEX0
+HEX0[1] << Birthdays:birthyay.HEX0
+HEX0[2] << Birthdays:birthyay.HEX0
+HEX0[3] << Birthdays:birthyay.HEX0
+HEX0[4] << Birthdays:birthyay.HEX0
+HEX0[5] << Birthdays:birthyay.HEX0
+HEX0[6] << Birthdays:birthyay.HEX0
+HEX0[7] << Birthdays:birthyay.HEX0
+HEX1[0] << Birthdays:birthyay.HEX1
+HEX1[1] << Birthdays:birthyay.HEX1
+HEX1[2] << Birthdays:birthyay.HEX1
+HEX1[3] << Birthdays:birthyay.HEX1
+HEX1[4] << Birthdays:birthyay.HEX1
+HEX1[5] << Birthdays:birthyay.HEX1
+HEX1[6] << Birthdays:birthyay.HEX1
+HEX1[7] << Birthdays:birthyay.HEX1
+HEX2[0] << Birthdays:birthyay.HEX2
+HEX2[1] << Birthdays:birthyay.HEX2
+HEX2[2] << Birthdays:birthyay.HEX2
+HEX2[3] << Birthdays:birthyay.HEX2
+HEX2[4] << Birthdays:birthyay.HEX2
+HEX2[5] << Birthdays:birthyay.HEX2
+HEX2[6] << Birthdays:birthyay.HEX2
+HEX2[7] << Birthdays:birthyay.HEX2
+HEX3[0] << Birthdays:birthyay.HEX3
+HEX3[1] << Birthdays:birthyay.HEX3
+HEX3[2] << Birthdays:birthyay.HEX3
+HEX3[3] << Birthdays:birthyay.HEX3
+HEX3[4] << Birthdays:birthyay.HEX3
+HEX3[5] << Birthdays:birthyay.HEX3
+HEX3[6] << Birthdays:birthyay.HEX3
+HEX3[7] << Birthdays:birthyay.HEX3
+HEX4[0] << Birthdays:birthyay.HEX4
+HEX4[1] << Birthdays:birthyay.HEX4
+HEX4[2] << Birthdays:birthyay.HEX4
+HEX4[3] << Birthdays:birthyay.HEX4
+HEX4[4] << Birthdays:birthyay.HEX4
+HEX4[5] << Birthdays:birthyay.HEX4
+HEX4[6] << Birthdays:birthyay.HEX4
+HEX4[7] << Birthdays:birthyay.HEX4
+HEX5[0] << Birthdays:birthyay.HEX5
+HEX5[1] << Birthdays:birthyay.HEX5
+HEX5[2] << Birthdays:birthyay.HEX5
+HEX5[3] << Birthdays:birthyay.HEX5
+HEX5[4] << Birthdays:birthyay.HEX5
+HEX5[5] << Birthdays:birthyay.HEX5
+HEX5[6] << Birthdays:birthyay.HEX5
+HEX5[7] << Birthdays:birthyay.HEX5
+KEY[0] => KEY[0].IN2
+KEY[1] => KEY[1].IN2
+LEDR[0] << LedSwitches:yey.LEDR
+LEDR[1] << LedSwitches:yey.LEDR
+LEDR[2] << LedSwitches:yey.LEDR
+LEDR[3] << LedSwitches:yey.LEDR
+LEDR[4] << LedSwitches:yey.LEDR
+LEDR[5] << LedSwitches:yey.LEDR
+LEDR[6] << LedSwitches:yey.LEDR
+LEDR[7] << LedSwitches:yey.LEDR
+LEDR[8] << LedSwitches:yey.LEDR
+LEDR[9] << LedSwitches:yey.LEDR
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+
+
+|Complete|LedSwitches:yey
+SW[0] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[2] => LEDR.IN0
+SW[3] => LEDR.IN0
+SW[4] => LEDR.IN0
+SW[5] => LEDR.IN0
+SW[6] => LEDR.IN0
+SW[7] => LEDR.IN0
+SW[8] => LEDR.IN0
+SW[9] => LEDR.IN0
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[0] => LEDR.IN1
+KEY[1] => ~NO_FANOUT~
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete|Birthdays:birthyay
+KEY[0] => WideOr0.IN0
+KEY[1] => WideOr0.IN1
+KEY[1] => sixth[0].CLK
+KEY[1] => sixth[1].CLK
+KEY[1] => sixth[2].CLK
+KEY[1] => sixth[3].CLK
+KEY[1] => fifth[0].CLK
+KEY[1] => fifth[1].CLK
+KEY[1] => fifth[2].CLK
+KEY[1] => fifth[3].CLK
+KEY[1] => fourth[0].CLK
+KEY[1] => fourth[1].CLK
+KEY[1] => fourth[2].CLK
+KEY[1] => fourth[3].CLK
+KEY[1] => third[0].CLK
+KEY[1] => third[1].CLK
+KEY[1] => third[2].CLK
+KEY[1] => third[3].CLK
+KEY[1] => second[0].CLK
+KEY[1] => second[1].CLK
+KEY[1] => second[2].CLK
+KEY[1] => second[3].CLK
+KEY[1] => first[0].CLK
+KEY[1] => first[1].CLK
+KEY[1] => first[2].CLK
+KEY[1] => first[3].CLK
+KEY[1] => true.CLK
+HEX0[0] <= HexNumbers:third_zero.HEX
+HEX0[1] <= HexNumbers:third_zero.HEX
+HEX0[2] <= HexNumbers:third_zero.HEX
+HEX0[3] <= HexNumbers:third_zero.HEX
+HEX0[4] <= HexNumbers:third_zero.HEX
+HEX0[5] <= HexNumbers:third_zero.HEX
+HEX0[6] <= HexNumbers:third_zero.HEX
+HEX0[7] <= HexNumbers:third_zero.HEX
+HEX1[0] <= HexNumbers:second_zero.HEX
+HEX1[1] <= HexNumbers:second_zero.HEX
+HEX1[2] <= HexNumbers:second_zero.HEX
+HEX1[3] <= HexNumbers:second_zero.HEX
+HEX1[4] <= HexNumbers:second_zero.HEX
+HEX1[5] <= HexNumbers:second_zero.HEX
+HEX1[6] <= HexNumbers:second_zero.HEX
+HEX1[7] <= HexNumbers:second_zero.HEX
+HEX2[0] <= HexNumbers:second_one.HEX
+HEX2[1] <= HexNumbers:second_one.HEX
+HEX2[2] <= HexNumbers:second_one.HEX
+HEX2[3] <= HexNumbers:second_one.HEX
+HEX2[4] <= HexNumbers:second_one.HEX
+HEX2[5] <= HexNumbers:second_one.HEX
+HEX2[6] <= HexNumbers:second_one.HEX
+HEX2[7] <= HexNumbers:second_one.HEX
+HEX3[0] <= HexNumbers:first_one.HEX
+HEX3[1] <= HexNumbers:first_one.HEX
+HEX3[2] <= HexNumbers:first_one.HEX
+HEX3[3] <= HexNumbers:first_one.HEX
+HEX3[4] <= HexNumbers:first_one.HEX
+HEX3[5] <= HexNumbers:first_one.HEX
+HEX3[6] <= HexNumbers:first_one.HEX
+HEX3[7] <= HexNumbers:first_one.HEX
+HEX4[0] <= HexNumbers:six.HEX
+HEX4[1] <= HexNumbers:six.HEX
+HEX4[2] <= HexNumbers:six.HEX
+HEX4[3] <= HexNumbers:six.HEX
+HEX4[4] <= HexNumbers:six.HEX
+HEX4[5] <= HexNumbers:six.HEX
+HEX4[6] <= HexNumbers:six.HEX
+HEX4[7] <= HexNumbers:six.HEX
+HEX5[0] <= HexNumbers:first_zero.HEX
+HEX5[1] <= HexNumbers:first_zero.HEX
+HEX5[2] <= HexNumbers:first_zero.HEX
+HEX5[3] <= HexNumbers:first_zero.HEX
+HEX5[4] <= HexNumbers:first_zero.HEX
+HEX5[5] <= HexNumbers:first_zero.HEX
+HEX5[6] <= HexNumbers:first_zero.HEX
+HEX5[7] <= HexNumbers:first_zero.HEX
+
+
+|Complete|Birthdays:birthyay|HexNumbers:first_zero
+NUM[0] => Decoder0.IN3
+NUM[1] => Decoder0.IN2
+NUM[2] => Decoder0.IN1
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|Birthdays:birthyay|HexNumbers:six
+NUM[0] => Decoder0.IN3
+NUM[1] => Decoder0.IN2
+NUM[2] => Decoder0.IN1
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|Birthdays:birthyay|HexNumbers:first_one
+NUM[0] => Decoder0.IN3
+NUM[1] => Decoder0.IN2
+NUM[2] => Decoder0.IN1
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|Birthdays:birthyay|HexNumbers:second_one
+NUM[0] => Decoder0.IN3
+NUM[1] => Decoder0.IN2
+NUM[2] => Decoder0.IN1
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|Birthdays:birthyay|HexNumbers:second_zero
+NUM[0] => Decoder0.IN3
+NUM[1] => Decoder0.IN2
+NUM[2] => Decoder0.IN1
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|Birthdays:birthyay|HexNumbers:third_zero
+NUM[0] => Decoder0.IN3
+NUM[1] => Decoder0.IN2
+NUM[2] => Decoder0.IN1
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
