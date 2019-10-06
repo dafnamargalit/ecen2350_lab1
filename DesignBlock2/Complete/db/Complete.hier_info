@@ -1,0 +1,304 @@
+|Complete
+ADC_CLK_10 => ~NO_FANOUT~
+MAX10_CLK1_50 => ~NO_FANOUT~
+MAX10_CLK2_50 => ~NO_FANOUT~
+HEX0[0] << AdderDisplay:plsWork.HEX0
+HEX0[1] << AdderDisplay:plsWork.HEX0
+HEX0[2] << AdderDisplay:plsWork.HEX0
+HEX0[3] << AdderDisplay:plsWork.HEX0
+HEX0[4] << AdderDisplay:plsWork.HEX0
+HEX0[5] << AdderDisplay:plsWork.HEX0
+HEX0[6] << AdderDisplay:plsWork.HEX0
+HEX0[7] << AdderDisplay:plsWork.HEX0
+HEX1[0] << AdderDisplay:plsWork.HEX1
+HEX1[1] << AdderDisplay:plsWork.HEX1
+HEX1[2] << AdderDisplay:plsWork.HEX1
+HEX1[3] << AdderDisplay:plsWork.HEX1
+HEX1[4] << AdderDisplay:plsWork.HEX1
+HEX1[5] << AdderDisplay:plsWork.HEX1
+HEX1[6] << AdderDisplay:plsWork.HEX1
+HEX1[7] << AdderDisplay:plsWork.HEX1
+HEX2[0] << AdderDisplay:plsWork.HEX2
+HEX2[1] << AdderDisplay:plsWork.HEX2
+HEX2[2] << AdderDisplay:plsWork.HEX2
+HEX2[3] << AdderDisplay:plsWork.HEX2
+HEX2[4] << AdderDisplay:plsWork.HEX2
+HEX2[5] << AdderDisplay:plsWork.HEX2
+HEX2[6] << AdderDisplay:plsWork.HEX2
+HEX2[7] << AdderDisplay:plsWork.HEX2
+HEX3[0] << AdderDisplay:plsWork.HEX3
+HEX3[1] << AdderDisplay:plsWork.HEX3
+HEX3[2] << AdderDisplay:plsWork.HEX3
+HEX3[3] << AdderDisplay:plsWork.HEX3
+HEX3[4] << AdderDisplay:plsWork.HEX3
+HEX3[5] << AdderDisplay:plsWork.HEX3
+HEX3[6] << AdderDisplay:plsWork.HEX3
+HEX3[7] << AdderDisplay:plsWork.HEX3
+HEX4[0] << AdderDisplay:plsWork.HEX4
+HEX4[1] << AdderDisplay:plsWork.HEX4
+HEX4[2] << AdderDisplay:plsWork.HEX4
+HEX4[3] << AdderDisplay:plsWork.HEX4
+HEX4[4] << AdderDisplay:plsWork.HEX4
+HEX4[5] << AdderDisplay:plsWork.HEX4
+HEX4[6] << AdderDisplay:plsWork.HEX4
+HEX4[7] << AdderDisplay:plsWork.HEX4
+HEX5[0] << AdderDisplay:plsWork.HEX5
+HEX5[1] << AdderDisplay:plsWork.HEX5
+HEX5[2] << AdderDisplay:plsWork.HEX5
+HEX5[3] << AdderDisplay:plsWork.HEX5
+HEX5[4] << AdderDisplay:plsWork.HEX5
+HEX5[5] << AdderDisplay:plsWork.HEX5
+HEX5[6] << AdderDisplay:plsWork.HEX5
+HEX5[7] << AdderDisplay:plsWork.HEX5
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|Complete|AdderDisplay:plsWork
+input_x[0] => input_x[0].IN1
+input_x[1] => input_x[1].IN1
+input_x[2] => input_x[2].IN1
+input_x[3] => input_x[3].IN1
+input_y[0] => input_y[0].IN1
+input_y[1] => input_y[1].IN1
+input_y[2] => input_y[2].IN1
+input_y[3] => input_y[3].IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+HEX0[0] <= HexNumbers:value.HEX
+HEX0[1] <= HexNumbers:value.HEX
+HEX0[2] <= HexNumbers:value.HEX
+HEX0[3] <= HexNumbers:value.HEX
+HEX0[4] <= HexNumbers:value.HEX
+HEX0[5] <= HexNumbers:value.HEX
+HEX0[6] <= HexNumbers:value.HEX
+HEX0[7] <= HexNumbers:value.HEX
+HEX1[0] <= HexSign:signage.HEX
+HEX1[1] <= HexSign:signage.HEX
+HEX1[2] <= HexSign:signage.HEX
+HEX1[3] <= HexSign:signage.HEX
+HEX1[4] <= HexSign:signage.HEX
+HEX1[5] <= HexSign:signage.HEX
+HEX1[6] <= HexSign:signage.HEX
+HEX1[7] <= HexSign:signage.HEX
+HEX2[0] <= HexNumbers:setValue2.HEX
+HEX2[1] <= HexNumbers:setValue2.HEX
+HEX2[2] <= HexNumbers:setValue2.HEX
+HEX2[3] <= HexNumbers:setValue2.HEX
+HEX2[4] <= HexNumbers:setValue2.HEX
+HEX2[5] <= HexNumbers:setValue2.HEX
+HEX2[6] <= HexNumbers:setValue2.HEX
+HEX2[7] <= HexNumbers:setValue2.HEX
+HEX3[0] <= HexSign:checkSign2.HEX
+HEX3[1] <= HexSign:checkSign2.HEX
+HEX3[2] <= HexSign:checkSign2.HEX
+HEX3[3] <= HexSign:checkSign2.HEX
+HEX3[4] <= HexSign:checkSign2.HEX
+HEX3[5] <= HexSign:checkSign2.HEX
+HEX3[6] <= HexSign:checkSign2.HEX
+HEX3[7] <= HexSign:checkSign2.HEX
+HEX4[0] <= HexNumbers:setValue1.HEX
+HEX4[1] <= HexNumbers:setValue1.HEX
+HEX4[2] <= HexNumbers:setValue1.HEX
+HEX4[3] <= HexNumbers:setValue1.HEX
+HEX4[4] <= HexNumbers:setValue1.HEX
+HEX4[5] <= HexNumbers:setValue1.HEX
+HEX4[6] <= HexNumbers:setValue1.HEX
+HEX4[7] <= HexNumbers:setValue1.HEX
+HEX5[0] <= HexSign:checkSign1.HEX
+HEX5[1] <= HexSign:checkSign1.HEX
+HEX5[2] <= HexSign:checkSign1.HEX
+HEX5[3] <= HexSign:checkSign1.HEX
+HEX5[4] <= HexSign:checkSign1.HEX
+HEX5[5] <= HexSign:checkSign1.HEX
+HEX5[6] <= HexSign:checkSign1.HEX
+HEX5[7] <= HexSign:checkSign1.HEX
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+
+
+|Complete|AdderDisplay:plsWork|FourBitAdder:adder
+inputx[0] => ~NO_FANOUT~
+inputx[1] => ~NO_FANOUT~
+inputx[2] => ~NO_FANOUT~
+inputx[3] => ~NO_FANOUT~
+inputy[0] => ~NO_FANOUT~
+inputy[1] => ~NO_FANOUT~
+inputy[2] => ~NO_FANOUT~
+inputy[3] => ~NO_FANOUT~
+SW[0] <= <GND>
+SW[1] <= <GND>
+SW[2] <= <GND>
+SW[3] <= <GND>
+SW[4] <= <GND>
+SW[5] <= <GND>
+SW[6] <= <GND>
+SW[7] <= <GND>
+SW[8] <= <GND>
+SW[9] <= <GND>
+KEY[0] <= <GND>
+KEY[1] <= <GND>
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= FullAdder:adder1.sum
+sum[1] <= FullAdder:adder2.sum
+sum[2] <= FullAdder:adder3.sum
+sum[3] <= FullAdder:adder4.sum
+
+
+|Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder1
+input1 => carry_out.IN0
+input1 => carry_out.IN0
+input2 => carry_out.IN1
+input2 => carry_out.IN1
+carry_in => carry_out.IN1
+sum <= <GND>
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder2
+input1 => carry_out.IN0
+input1 => carry_out.IN0
+input2 => carry_out.IN1
+input2 => carry_out.IN1
+carry_in => carry_out.IN1
+sum <= <GND>
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder3
+input1 => carry_out.IN0
+input1 => carry_out.IN0
+input2 => carry_out.IN1
+input2 => carry_out.IN1
+carry_in => carry_out.IN1
+sum <= <GND>
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder4
+input1 => carry_out.IN0
+input1 => carry_out.IN0
+input2 => carry_out.IN1
+input2 => carry_out.IN1
+carry_in => carry_out.IN1
+sum <= <GND>
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Complete|AdderDisplay:plsWork|HexSign:checkSign1
+sign[0] => Decoder0.IN3
+sign[1] => Decoder0.IN2
+sign[2] => Decoder0.IN1
+sign[3] => Decoder0.IN0
+HEX[0] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|AdderDisplay:plsWork|HexNumbers:setValue1
+NUM[0] => Decoder0.IN3
+NUM[0] => Decoder1.IN2
+NUM[1] => Decoder0.IN2
+NUM[1] => Decoder1.IN1
+NUM[2] => Decoder0.IN1
+NUM[2] => Decoder1.IN0
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|AdderDisplay:plsWork|HexSign:checkSign2
+sign[0] => Decoder0.IN3
+sign[1] => Decoder0.IN2
+sign[2] => Decoder0.IN1
+sign[3] => Decoder0.IN0
+HEX[0] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|AdderDisplay:plsWork|HexNumbers:setValue2
+NUM[0] => Decoder0.IN3
+NUM[0] => Decoder1.IN2
+NUM[1] => Decoder0.IN2
+NUM[1] => Decoder1.IN1
+NUM[2] => Decoder0.IN1
+NUM[2] => Decoder1.IN0
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|AdderDisplay:plsWork|HexSign:signage
+sign[0] => Decoder0.IN3
+sign[1] => Decoder0.IN2
+sign[2] => Decoder0.IN1
+sign[3] => Decoder0.IN0
+HEX[0] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= sig.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|Complete|AdderDisplay:plsWork|HexNumbers:value
+NUM[0] => Decoder0.IN3
+NUM[0] => Decoder1.IN2
+NUM[1] => Decoder0.IN2
+NUM[1] => Decoder1.IN1
+NUM[2] => Decoder0.IN1
+NUM[2] => Decoder1.IN0
+NUM[3] => Decoder0.IN0
+HEX[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
