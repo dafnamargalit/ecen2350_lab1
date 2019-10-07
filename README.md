@@ -1,7 +1,7 @@
 # ECEN 2350 Lab 1
 
-# [Design Block 1](https://github.com/dafnamargalit/ecen2350/tree/master/DesignBlock1/Complete)
-Top level file: [Complete.v](https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/Complete.v)
+# [Design Block 1](DesignBlock1/Complete)
+Top level file: [Complete.v](DesignBlock1/Complete/Complete.v)
 Secondary modules: 
 1. [HexNumbers.v](https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/HexNumbers.v)
 Converts binary to a 9-bit number to be displayed on the seven segment display.
