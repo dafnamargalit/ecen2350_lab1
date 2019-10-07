@@ -23,7 +23,9 @@ begin
     $dumpvars;
     $display($time, "<< Starting Simulation >>");
     SW = 10'b1110111011;
-    #40 $display("<< Simulation ended >>");
+    #10 SW = 10'b0001000100;
+    #30 SW = 10'b1001001010;
+    #100 $display("<< Simulation ended >>");
     $finish;
 end
 

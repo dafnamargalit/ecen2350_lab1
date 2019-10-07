@@ -1,7 +1,7 @@
 VCD info: dumpfile out.vcd opened for output.
                    0<< Starting Simulation >>
-                   0KEY[0] = 1, KEY[1] = 1, SW[9:0] = 0000000001
-                  10KEY[0] = 0, KEY[1] = 1, SW[9:0] = 0000000001
-                  30KEY[0] = 0, KEY[1] = 0, SW[9:0] = 0000000001
-                  60KEY[0] = 0, KEY[1] = 0, SW[9:0] = 0000000000
+                   0KEY[0] = 1, KEY[1] = 1, SW[9:0] = 1100110011
+                  10KEY[0] = 0, KEY[1] = 1, SW[9:0] = 1100110011
+                  20KEY[0] = 0, KEY[1] = 0, SW[9:0] = 1100110011
+                  30KEY[0] = 0, KEY[1] = 0, SW[9:0] = 0011001100
 << Simulation ended >>

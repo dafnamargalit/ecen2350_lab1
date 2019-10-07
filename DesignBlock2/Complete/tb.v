@@ -29,6 +29,9 @@ begin
     KEY[0] = 1;
     KEY[1] = 1;
     SW = 8'b00110101;
+    #10 SW = 8'b11001010;
+    #10 KEY[0] = 0;
+    #10 KEY[1] = 0;
     #10 $display("<< Simulation ended >>");
     $finish;
 end

@@ -1,4 +1,6 @@
 VCD info: dumpfile out.vcd opened for output.
                    0<< Starting Simulation >>
                    0SW = 1110111011, LEDR = zzzzzzz100, HEX0 = 10010010, HEX1 = 10001000, HEX4 = 10010010, HEX5 = 10001000
+                  10SW = 0001000100, LEDR = zzzzzzz100, HEX0 = 10011001, HEX1 = 10000011, HEX4 = 10011001, HEX5 = 10000011
+                  40SW = 1001001010, LEDR = zzzzzzz001, HEX0 = 10001000, HEX1 = 10000011, HEX4 = 10011001, HEX5 = 10000011
 << Simulation ended >>

@@ -30,10 +30,11 @@ begin
     $display($time, "<< Starting Simulation >>");
     KEY[0] = 1;
     KEY[1] = 1;
-    SW[9:0] = 1;
+    SW[9:0] = 10'b1100110011;
     #10 KEY[0] = 0;
-    #20 KEY[1] = 0;
-    #30 SW[9:0] = 0;
+    #10 KEY[1] = 0;
+    #10 SW[9:0] = 10'b0011001100;
+    #20 KEY[0] = 0;
     #10 $display("<< Simulation ended >>");
     $finish;
 end
