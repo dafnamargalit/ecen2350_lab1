@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at DesignBlock1.v(33): always construct contains both blocking and non-blocking assignments File: /home/dafna/DE10/Lab1/DesignBlock4/Complete/DesignBlock1.v Line: 33

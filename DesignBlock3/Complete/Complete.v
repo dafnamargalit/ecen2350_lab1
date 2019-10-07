@@ -17,8 +17,8 @@ assign twosComp = (SW[9:8] == 2'b11) ? 1 : 0;
 
 wire [3:0] sign1, sign2;
 
-assign sign1 = (twosComp && input1[3]) ? 4'b1011 : 4'b1111;
-assign sign2 = (twosComp && input2[3]) ? 4'b1011 : 4'b1111;
+assign sign1 = (twosComp && input1[3]) ? 4'b1010 : 4'b1011;
+assign sign2 = (twosComp && input2[3]) ? 4'b1010 : 4'b1011;
 
 HexNumbers inputSign1(.NUM (sign1), .HEX (HEX5));
 HexNumbers inputSign2(.NUM (sign2), .HEX (HEX1));
