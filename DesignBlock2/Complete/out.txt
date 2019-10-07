@@ -1,0 +1,4 @@
+VCD info: dumpfile out.vcd opened for output.
+                   0<< Starting Simulation >>
+                   0KEY = 11, SW = 00110101, HEX0 = 10001110, HEX1 = 11000000, HEX2 = 10010010, HEX3 = 10000011, HEX4 = 10110000, HEX5 = 10000011
+<< Simulation ended >>

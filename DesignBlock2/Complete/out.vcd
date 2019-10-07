@@ -1,0 +1,199 @@
+$date
+	Mon Oct  7 09:19:36 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module tb $end
+$var wire 8 ! HEX5 [7:0] $end
+$var wire 8 " HEX4 [7:0] $end
+$var wire 8 # HEX3 [7:0] $end
+$var wire 8 $ HEX2 [7:0] $end
+$var wire 8 % HEX1 [7:0] $end
+$var wire 8 & HEX0 [7:0] $end
+$var reg 2 ' KEY [1:0] $end
+$var reg 8 ( SW [7:0] $end
+$scope module DUT $end
+$var wire 2 ) KEY [1:0] $end
+$var wire 8 * SW [7:0] $end
+$var wire 8 + HEX5 [7:0] $end
+$var wire 8 , HEX4 [7:0] $end
+$var wire 8 - HEX3 [7:0] $end
+$var wire 8 . HEX2 [7:0] $end
+$var wire 8 / HEX1 [7:0] $end
+$var wire 8 0 HEX0 [7:0] $end
+$scope module plsWork $end
+$var wire 2 1 KEY [1:0] $end
+$var wire 8 2 SW [7:0] $end
+$var wire 4 3 sum_out [3:0] $end
+$var wire 4 4 sum [3:0] $end
+$var wire 4 5 sign_out [3:0] $end
+$var wire 4 6 sign2 [3:0] $end
+$var wire 4 7 sign1 [3:0] $end
+$var wire 1 8 overflow $end
+$var wire 4 9 input_y [3:0] $end
+$var wire 4 : input_x [3:0] $end
+$var wire 4 ; input2 [3:0] $end
+$var wire 4 < input1 [3:0] $end
+$var wire 8 = HEX5 [7:0] $end
+$var wire 8 > HEX4 [7:0] $end
+$var wire 8 ? HEX3 [7:0] $end
+$var wire 8 @ HEX2 [7:0] $end
+$var wire 8 A HEX1 [7:0] $end
+$var wire 8 B HEX0 [7:0] $end
+$scope module adder $end
+$var wire 1 C carry_in $end
+$var wire 4 D input_x [3:0] $end
+$var wire 4 E input_y [3:0] $end
+$var wire 1 8 overflow $end
+$var wire 4 F sum [3:0] $end
+$var wire 4 G sum_out [3:0] $end
+$var wire 4 H carry_out [3:0] $end
+$scope module adder1 $end
+$var wire 1 I carry_in $end
+$var wire 1 J carry_out $end
+$var wire 1 K input1 $end
+$var wire 1 L input2 $end
+$var wire 1 M sum_out $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 N carry_in $end
+$var wire 1 O carry_out $end
+$var wire 1 P input1 $end
+$var wire 1 Q input2 $end
+$var wire 1 R sum_out $end
+$upscope $end
+$scope module adder3 $end
+$var wire 1 S carry_in $end
+$var wire 1 T carry_out $end
+$var wire 1 U input1 $end
+$var wire 1 V input2 $end
+$var wire 1 W sum_out $end
+$upscope $end
+$scope module adder4 $end
+$var wire 1 X carry_in $end
+$var wire 1 Y carry_out $end
+$var wire 1 Z input1 $end
+$var wire 1 [ input2 $end
+$var wire 1 \ sum_out $end
+$upscope $end
+$upscope $end
+$scope module sig $end
+$var wire 8 ] HEX [7:0] $end
+$var wire 4 ^ NUM [3:0] $end
+$var reg 8 _ out [7:0] $end
+$upscope $end
+$scope module sign $end
+$var wire 8 ` HEX [7:0] $end
+$var wire 4 a NUM [3:0] $end
+$var reg 8 b out [7:0] $end
+$upscope $end
+$scope module signout $end
+$var wire 8 c HEX [7:0] $end
+$var wire 4 d NUM [3:0] $end
+$var reg 8 e out [7:0] $end
+$upscope $end
+$scope module sumout $end
+$var wire 8 f HEX [7:0] $end
+$var wire 4 g NUM [3:0] $end
+$var reg 8 h out [7:0] $end
+$upscope $end
+$scope module value1 $end
+$var wire 8 i HEX [7:0] $end
+$var wire 4 j NUM [3:0] $end
+$var reg 8 k out [7:0] $end
+$upscope $end
+$scope module value2 $end
+$var wire 8 l HEX [7:0] $end
+$var wire 4 m NUM [3:0] $end
+$var reg 8 n out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10010010 n
+b101 m
+b10010010 l
+b10110000 k
+b11 j
+b10110000 i
+b10001110 h
+b1111 g
+b10001110 f
+b11000000 e
+b0 d
+b11000000 c
+b10000011 b
+b1011 a
+b10000011 `
+b10000011 _
+b1011 ^
+b10000011 ]
+1\
+0[
+0Z
+0Y
+1X
+0W
+1V
+0U
+1T
+1S
+0R
+0Q
+1P
+1O
+1N
+0M
+1L
+1K
+1J
+0I
+b111 H
+b1000 G
+b1000 F
+b101 E
+b11 D
+1C
+b10001110 B
+b11000000 A
+b10010010 @
+b10000011 ?
+b10110000 >
+b10000011 =
+b11 <
+b101 ;
+b11 :
+b101 9
+18
+b1011 7
+b1011 6
+b0 5
+b1000 4
+b1111 3
+b110101 2
+b11 1
+b10001110 0
+b11000000 /
+b10010010 .
+b10000011 -
+b10110000 ,
+b10000011 +
+b110101 *
+b11 )
+b110101 (
+b11 '
+b10001110 &
+b11000000 %
+b10010010 $
+b10000011 #
+b10110000 "
+b10000011 !
+$end
+#100

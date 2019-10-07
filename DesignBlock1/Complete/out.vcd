@@ -1,0 +1,160 @@
+$date
+	Mon Oct  7 09:06:01 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 10 ! LEDR [9:0] $end
+$var wire 8 " HEX5 [7:0] $end
+$var wire 8 # HEX4 [7:0] $end
+$var wire 8 $ HEX3 [7:0] $end
+$var wire 8 % HEX2 [7:0] $end
+$var wire 8 & HEX1 [7:0] $end
+$var wire 8 ' HEX0 [7:0] $end
+$var reg 2 ( KEY [1:0] $end
+$var reg 10 ) SW [9:0] $end
+$scope module test1 $end
+$var wire 2 * KEY [1:0] $end
+$var wire 10 + SW [9:0] $end
+$var wire 10 , LEDR [9:0] $end
+$var wire 8 - HEX5 [7:0] $end
+$var wire 8 . HEX4 [7:0] $end
+$var wire 8 / HEX3 [7:0] $end
+$var wire 8 0 HEX2 [7:0] $end
+$var wire 8 1 HEX1 [7:0] $end
+$var wire 8 2 HEX0 [7:0] $end
+$scope module birthyay $end
+$var wire 2 3 KEY [1:0] $end
+$var wire 8 4 HEX5 [7:0] $end
+$var wire 8 5 HEX4 [7:0] $end
+$var wire 8 6 HEX3 [7:0] $end
+$var wire 8 7 HEX2 [7:0] $end
+$var wire 8 8 HEX1 [7:0] $end
+$var wire 8 9 HEX0 [7:0] $end
+$var reg 4 : fifth [3:0] $end
+$var reg 4 ; first [3:0] $end
+$var reg 4 < fourth [3:0] $end
+$var reg 4 = second [3:0] $end
+$var reg 4 > sixth [3:0] $end
+$var reg 4 ? third [3:0] $end
+$var reg 1 @ true $end
+$scope module first_one $end
+$var wire 8 A HEX [7:0] $end
+$var wire 4 B NUM [3:0] $end
+$var reg 8 C out [7:0] $end
+$upscope $end
+$scope module first_zero $end
+$var wire 8 D HEX [7:0] $end
+$var wire 4 E NUM [3:0] $end
+$var reg 8 F out [7:0] $end
+$upscope $end
+$scope module second_one $end
+$var wire 8 G HEX [7:0] $end
+$var wire 4 H NUM [3:0] $end
+$var reg 8 I out [7:0] $end
+$upscope $end
+$scope module second_zero $end
+$var wire 8 J HEX [7:0] $end
+$var wire 4 K NUM [3:0] $end
+$var reg 8 L out [7:0] $end
+$upscope $end
+$scope module six $end
+$var wire 8 M HEX [7:0] $end
+$var wire 4 N NUM [3:0] $end
+$var reg 8 O out [7:0] $end
+$upscope $end
+$scope module third_zero $end
+$var wire 8 P HEX [7:0] $end
+$var wire 4 Q NUM [3:0] $end
+$var reg 8 R out [7:0] $end
+$upscope $end
+$upscope $end
+$scope module yey $end
+$var wire 2 S KEY [1:0] $end
+$var wire 10 T SW [9:0] $end
+$var wire 10 U LEDR [9:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111111110 U
+b1 T
+b11 S
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+x@
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+b11 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+b1111111110 ,
+b1 +
+b11 *
+b1 )
+b11 (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+b1111111110 !
+$end
+#10000
+b1 !
+b1 ,
+b1 U
+b10 (
+b10 *
+b10 3
+b10 S
+#30000
+b0 (
+b0 *
+b0 3
+b0 S
+#60000
+b0 !
+b0 ,
+b0 U
+b0 )
+b0 +
+b0 T
+#70000
