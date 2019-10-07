@@ -1,45 +1,45 @@
 # ECEN 2350 Lab 1
 
-# [Design Block 1] (./DesignBlock1)
-Top level file: [Complete.v] (./DesignBlock1/Complete/Complete.v)
+# [Design Block 1] (https://github.com/dafnamargalit/ecen2350/tree/master/DesignBlock1/Complete)
+Top level file: [Complete.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/Complete.v)
 Secondary modules: 
-1. [HexNumbers.v] (./DesignBlock1/Complete/HexNumbers.v)
+1. [HexNumbers.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/HexNumbers.v)
 Converts binary to a 9-bit number to be displayed on the seven segment display.
-2. [LedSwitches.v] (./DesignBlock1/Complete/LedSwitches.v)
+2. [LedSwitches.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/LedSwitches.v)
 Assigns Switches to corresponding LEDs, toggles LEDs on KEY[0] press and hold.
-3. [Birthdays.v] (./DesignBlock1/Complete/Birthdays.v)
+3. [Birthdays.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/Birthdays.v)
 Displays birthdays on hex display and toggles on KEY[1] press.
-4. [tb.v] (./DesignBlock1/Complete/tb.v)
+4. [tb.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock1/Complete/tb.v)
 Testbench file.
 
-# [Design Block 2] (./DesignBlock2)
-Top level file: [Complete.v] (DesignBlock2/Complete/Complete.v)
+# [Design Block 2] (https://github.com/dafnamargalit/ecen2350/tree/master/DesignBlock2/Complete)
+Top level file: [Complete.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock2/Complete/Complete.v)
 Secondary modules: 
-1. [HexNumbers.v] (DesignBlock2/Complete/HexNumbers.v)
+1. [HexNumbers.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock2/Complete/HexNumbers.v)
 Converts binary to a 9-bit number to be displayed on the seven segment display.
-2. [FullAdder.v] (DesignBlock2/Complete/FullAdder.v)
+2. [FullAdder.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock2/Complete/FullAdder.v)
 Creates a full adder.
-3. [FourBitAdder.v] (DesignBlock2/Complete/FourBitAdder.v)
+3. [FourBitAdder.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock2/Complete/FourBitAdder.v)
 Initializes four FourAdders.
-4. [AdderDisplay.v] (DesignBlock2/Complete/AdderDisplay.v)
+4. [AdderDisplay.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock2/Complete/AdderDisplay.v)
 Displays output of FourBitAdder.
-5. [tb.v] (DesignBlock2/Complete/tb.v)
+5. [tb.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock2/Complete/tb.v)
 Testbench file.
 
-# [Design Block 3] (DesignBlock3)
-Top level file: [Complete.v] (DesignBlock3/Complete/Complete.v)
+# [Design Block 3] (https://github.com/dafnamargalit/ecen2350/tree/master/DesignBlock3/Complete)
+Top level file: [Complete.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock3/Complete/Complete.v)
 Secondary modules: 
-1. [HexNumbers.v] (DesignBlock3/Complete/HexNumbers.v)
+1. [HexNumbers.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock3/Complete/HexNumbers.v)
 Converts binary to a 9-bit number to be displayed on the seven segment display.
-2. [tb.v] (DesignBlock3/Complete/tb.v)
+2. [tb.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock3/Complete/tb.v)
 Testbench file.
 
-# [Design Block 4 (Integration)] (DesignBlock4]
-Top level file: [Complete.v] (DesignBlock4/Complete/Complete.v)
+# [Design Block 4 (Integration)] (https://github.com/dafnamargalit/ecen2350/tree/master/DesignBlock4/Complete)
+Top level file: [Complete.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/Complete.v)
 Secondary modules: 
-1. [DesignBlock1.v] (DesignBlock4/Complete/DesignBlock1.v)
-2. [DesignBlock2.v] (DesignBlock4/Complete/DesignBlock2.v)
-3. [DesignBlock3.v] (DesignBlock4/Complete/DesignBlock3.v)
-4. [HexNumbers.v] (DesignBlock4/Complete/HexNumbers.v)
-5. [FullAdder.v] (DesignBlock2/Complete/FullAdder.v)
-6. [FourBitAdder.v] (DesignBlock2/Complete/FourBitAdder.v)
+1. [DesignBlock1.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/DesignBlock1.v)
+2. [DesignBlock2.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/DesignBlock2.v)
+3. [DesignBlock3.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/DesignBlock3.v)
+4. [HexNumbers.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/HexNumbers.v)
+5. [FullAdder.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/FullAdder.v)
+6. [FourBitAdder.v] (https://github.com/dafnamargalit/ecen2350/blob/master/DesignBlock4/Complete/FourBitAdder.v)
