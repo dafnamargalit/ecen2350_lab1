@@ -11,6 +11,8 @@ Assigns Switches to corresponding LEDs, toggles LEDs on KEY[0] press and hold.
 Displays birthdays on hex display and toggles on KEY[1] press.
 4. [tb.v](DesignBlock1/Complete/tb.v)
 Testbench file.
+5. [db1_capture.png](DesignBlock1/Complete/db1_capture.png)
+GTKWave Screenshot.
 
 # [Design Block 2](DesignBlock2/Complete)
 Top level file: [Complete.v](DesignBlock2/Complete/Complete.v)
@@ -25,6 +27,8 @@ Initializes four FourAdders.
 Displays output of FourBitAdder.
 5. [tb.v](DesignBlock2/Complete/tb.v)
 Testbench file.
+6. [db2_capture.png](DesignBlock2/Complete/db2_capture.png)
+GTKWave Screenshot.
 
 # [Design Block 3](DesignBlock3/Complete)
 Top level file: [Complete.v](DesignBlock3/Complete/Complete.v)
@@ -33,6 +37,8 @@ Secondary modules:
 Converts binary to a 9-bit number to be displayed on the seven segment display.
 2. [tb.v](DesignBlock3/Complete/tb.v)
 Testbench file.
+3. [db3_capture.png](DesignBlock3/Complete/db3_capture.png)
+GTKWave Screenshot.
 
 # [Design Block 4 (Integration)](DesignBlock4/Complete)
 Top level file: [Complete.v](DesignBlock4/Complete/Complete.v)
