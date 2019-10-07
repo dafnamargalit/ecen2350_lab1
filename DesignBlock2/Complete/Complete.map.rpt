@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Complete
-Sat Oct  5 15:20:53 2019
+Sun Oct  6 22:03:57 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,20 +13,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Port Connectivity Checks: "AdderDisplay:plsWork|HexSign:signage"
- 11. Port Connectivity Checks: "AdderDisplay:plsWork|HexSign:checkSign2"
- 12. Port Connectivity Checks: "AdderDisplay:plsWork|HexSign:checkSign1"
- 13. Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder4"
- 14. Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder3"
- 15. Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder2"
- 16. Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder1"
- 17. Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder"
- 18. Port Connectivity Checks: "AdderDisplay:plsWork"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "AdderDisplay:plsWork|HexNumbers:signout"
+ 11. Port Connectivity Checks: "AdderDisplay:plsWork|HexNumbers:sign"
+ 12. Port Connectivity Checks: "AdderDisplay:plsWork|HexNumbers:sig"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -52,16 +46,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct  5 15:20:53 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct  6 22:03:57 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Complete                                    ;
 ; Top-level Entity Name              ; Complete                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 6                                           ;
-;     Total combinational functions  ; 6                                           ;
+; Total logic elements               ; 36                                          ;
+;     Total combinational functions  ; 36                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 63                                          ;
+; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -166,12 +160,10 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 3           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 3           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -184,72 +176,60 @@ refer to the applicable agreement for further details.
 ; AdderDisplay.v                   ; yes             ; Auto-Found Verilog HDL File  ; /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v ;         ;
 ; FourBitAdder.v                   ; yes             ; Auto-Found Verilog HDL File  ; /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v ;         ;
 ; FullAdder.v                      ; yes             ; Auto-Found Verilog HDL File  ; /home/dafna/DE10/Lab1/DesignBlock2/Complete/FullAdder.v    ;         ;
-; HexSign.v                        ; yes             ; Auto-Found Verilog HDL File  ; /home/dafna/DE10/Lab1/DesignBlock2/Complete/HexSign.v      ;         ;
 ; HexNumbers.v                     ; yes             ; Auto-Found Verilog HDL File  ; /home/dafna/DE10/Lab1/DesignBlock2/Complete/HexNumbers.v   ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                    ;
-+---------------------------------------------+----------------------------------+
-; Resource                                    ; Usage                            ;
-+---------------------------------------------+----------------------------------+
-; Estimated Total logic elements              ; 6                                ;
-;                                             ;                                  ;
-; Total combinational functions               ; 6                                ;
-; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 0                                ;
-;     -- 3 input functions                    ; 2                                ;
-;     -- <=2 input functions                  ; 4                                ;
-;                                             ;                                  ;
-; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 6                                ;
-;     -- arithmetic mode                      ; 0                                ;
-;                                             ;                                  ;
-; Total registers                             ; 0                                ;
-;     -- Dedicated logic registers            ; 0                                ;
-;     -- I/O registers                        ; 0                                ;
-;                                             ;                                  ;
-; I/O pins                                    ; 63                               ;
-;                                             ;                                  ;
-; Embedded Multiplier 9-bit elements          ; 0                                ;
-;                                             ;                                  ;
-; Maximum fan-out node                        ; AdderDisplay:plsWork|value2[2]~0 ;
-; Maximum fan-out                             ; 6                                ;
-; Total fan-out                               ; 89                               ;
-; Average fan-out                             ; 0.66                             ;
-+---------------------------------------------+----------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 36          ;
+;                                             ;             ;
+; Total combinational functions               ; 36          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 28          ;
+;     -- 3 input functions                    ; 7           ;
+;     -- <=2 input functions                  ; 1           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 36          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 61          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[0]~input ;
+; Maximum fan-out                             ; 11          ;
+; Total fan-out                               ; 226         ;
+; Average fan-out                             ; 1.43        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
-+------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                 ; Entity Name  ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------+--------------+--------------+
-; |Complete                    ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 63   ; 0            ; 0          ; |Complete                                           ; Complete     ; work         ;
-;    |AdderDisplay:plsWork|    ; 6 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork                      ; AdderDisplay ; work         ;
-;       |HexNumbers:setValue1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|HexNumbers:setValue1 ; HexNumbers   ; work         ;
-;       |HexNumbers:setValue2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|HexNumbers:setValue2 ; HexNumbers   ; work         ;
-+------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                ; Entity Name  ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------+--------------+--------------+
+; |Complete                   ; 36 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |Complete                                                          ; Complete     ; work         ;
+;    |AdderDisplay:plsWork|   ; 36 (5)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork                                     ; AdderDisplay ; work         ;
+;       |FourBitAdder:adder|  ; 9 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|FourBitAdder:adder                  ; FourBitAdder ; work         ;
+;          |FullAdder:adder1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder1 ; FullAdder    ; work         ;
+;          |FullAdder:adder2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder2 ; FullAdder    ; work         ;
+;          |FullAdder:adder3| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder3 ; FullAdder    ; work         ;
+;          |FullAdder:adder4| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder4 ; FullAdder    ; work         ;
+;       |HexNumbers:signout|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|HexNumbers:signout                  ; HexNumbers   ; work         ;
+;       |HexNumbers:sumout|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|HexNumbers:sumout                   ; HexNumbers   ; work         ;
+;       |HexNumbers:value1|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|HexNumbers:value1                   ; HexNumbers   ; work         ;
+;       |HexNumbers:value2|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Complete|AdderDisplay:plsWork|HexNumbers:value2                   ; HexNumbers   ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; AdderDisplay:plsWork|value2[0]                     ; SW[0]               ; yes                    ;
-; AdderDisplay:plsWork|value2[1]                     ; SW[0]               ; yes                    ;
-; AdderDisplay:plsWork|value2[2]                     ; SW[0]               ; yes                    ;
-; AdderDisplay:plsWork|value2[3]                     ; SW[0]               ; yes                    ;
-; AdderDisplay:plsWork|value1[0]                     ; SW[4]               ; yes                    ;
-; AdderDisplay:plsWork|value1[1]                     ; SW[4]               ; yes                    ;
-; AdderDisplay:plsWork|value1[2]                     ; SW[4]               ; yes                    ;
-; AdderDisplay:plsWork|value1[3]                     ; SW[4]               ; yes                    ;
-; Number of user-specified and inferred latches = 8  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -267,91 +247,44 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Complete|AdderDisplay:plsWork|sum_out[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "AdderDisplay:plsWork|HexNumbers:signout" ;
++--------+-------+----------+-----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                 ;
++--------+-------+----------+-----------------------------------------+
+; NUM[2] ; Input ; Info     ; Stuck at GND                            ;
++--------+-------+----------+-----------------------------------------+
+
+
 +------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|HexSign:signage" ;
-+------------+-------+----------+----------------------------------+
-; Port       ; Type  ; Severity ; Details                          ;
-+------------+-------+----------+----------------------------------+
-; sign[2..1] ; Input ; Info     ; Stuck at GND                     ;
-+------------+-------+----------+----------------------------------+
+; Port Connectivity Checks: "AdderDisplay:plsWork|HexNumbers:sign" ;
++--------+-------+----------+--------------------------------------+
+; Port   ; Type  ; Severity ; Details                              ;
++--------+-------+----------+--------------------------------------+
+; NUM[3] ; Input ; Info     ; Stuck at VCC                         ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                         ;
+; NUM[0] ; Input ; Info     ; Stuck at VCC                         ;
++--------+-------+----------+--------------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|HexSign:checkSign2" ;
-+------------+-------+----------+-------------------------------------+
-; Port       ; Type  ; Severity ; Details                             ;
-+------------+-------+----------+-------------------------------------+
-; sign[2..0] ; Input ; Info     ; Stuck at GND                        ;
-+------------+-------+----------+-------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|HexSign:checkSign1" ;
-+------------+-------+----------+-------------------------------------+
-; Port       ; Type  ; Severity ; Details                             ;
-+------------+-------+----------+-------------------------------------+
-; sign[2..0] ; Input ; Info     ; Stuck at GND                        ;
-+------------+-------+----------+-------------------------------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder4" ;
-+--------+-------+----------+----------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                  ;
-+--------+-------+----------+----------------------------------------------------------+
-; input1 ; Input ; Info     ; Stuck at GND                                             ;
-; input2 ; Input ; Info     ; Stuck at GND                                             ;
-+--------+-------+----------+----------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder3" ;
-+--------+-------+----------+----------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                  ;
-+--------+-------+----------+----------------------------------------------------------+
-; input1 ; Input ; Info     ; Stuck at GND                                             ;
-; input2 ; Input ; Info     ; Stuck at GND                                             ;
-+--------+-------+----------+----------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder2" ;
-+--------+-------+----------+----------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                  ;
-+--------+-------+----------+----------------------------------------------------------+
-; input1 ; Input ; Info     ; Stuck at GND                                             ;
-; input2 ; Input ; Info     ; Stuck at GND                                             ;
-+--------+-------+----------+----------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder1" ;
-+----------+-------+----------+--------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                ;
-+----------+-------+----------+--------------------------------------------------------+
-; input1   ; Input ; Info     ; Stuck at GND                                           ;
-; input2   ; Input ; Info     ; Stuck at GND                                           ;
-; carry_in ; Input ; Info     ; Stuck at VCC                                           ;
-+----------+-------+----------+--------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork|FourBitAdder:adder"                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; SW   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; KEY  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AdderDisplay:plsWork"                                                                                                                       ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; SW   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "AdderDisplay:plsWork|HexNumbers:sig" ;
++--------+-------+----------+-------------------------------------+
+; Port   ; Type  ; Severity ; Details                             ;
++--------+-------+----------+-------------------------------------+
+; NUM[3] ; Input ; Info     ; Stuck at VCC                        ;
+; NUM[2] ; Input ; Info     ; Stuck at GND                        ;
+; NUM[0] ; Input ; Info     ; Stuck at VCC                        ;
++--------+-------+----------+-------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -359,16 +292,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 63                          ;
-; cycloneiii_lcell_comb ; 14                          ;
-;     normal            ; 14                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 2                           ;
+; boundary_port         ; 61                          ;
+; cycloneiii_lcell_comb ; 51                          ;
+;     normal            ; 51                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.50                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -387,7 +321,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Oct  5 15:20:42 2019
+    Info: Processing started: Sun Oct  6 22:03:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Complete -c Complete
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 3 of the 3 processors detected
@@ -396,58 +330,22 @@ Warning (12125): Using design file Complete.v, which is not specified as a desig
 Info (12127): Elaborating entity "Complete" for the top level hierarchy
 Warning (12125): Using design file AdderDisplay.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: AdderDisplay File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at AdderDisplay.v(37): created implicit net for "overflow" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 37
-Info (12128): Elaborating entity "AdderDisplay" for hierarchy "AdderDisplay:plsWork" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 38
-Info (10041): Inferred latch for "value2[0]" at AdderDisplay.v(48) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 48
-Info (10041): Inferred latch for "value2[1]" at AdderDisplay.v(48) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 48
-Info (10041): Inferred latch for "value2[2]" at AdderDisplay.v(48) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 48
-Info (10041): Inferred latch for "value2[3]" at AdderDisplay.v(48) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 48
-Info (10041): Inferred latch for "value1[0]" at AdderDisplay.v(41) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 41
-Info (10041): Inferred latch for "value1[1]" at AdderDisplay.v(41) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 41
-Info (10041): Inferred latch for "value1[2]" at AdderDisplay.v(41) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 41
-Info (10041): Inferred latch for "value1[3]" at AdderDisplay.v(41) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 41
+Info (12128): Elaborating entity "AdderDisplay" for hierarchy "AdderDisplay:plsWork" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 37
+Warning (10230): Verilog HDL assignment warning at AdderDisplay.v(35): truncated value with size 32 to match size of target (4) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 35
+Warning (10230): Verilog HDL assignment warning at AdderDisplay.v(43): truncated value with size 32 to match size of target (4) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 43
+Warning (10230): Verilog HDL assignment warning at AdderDisplay.v(51): truncated value with size 32 to match size of target (4) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 51
 Warning (12125): Using design file FourBitAdder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: FourBitAdder File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 1
-Info (12128): Elaborating entity "FourBitAdder" for hierarchy "AdderDisplay:plsWork|FourBitAdder:adder" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 37
-Warning (10030): Net "SW[7..0]" at FourBitAdder.v(4) has no driver or initial value, using a default initial value '0' File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 4
-Warning (10030): Net "KEY[0]" at FourBitAdder.v(5) has no driver or initial value, using a default initial value '0' File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 5
-Warning (10034): Output port "SW[9..8]" at FourBitAdder.v(4) has no driver File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 4
-Warning (10034): Output port "KEY[1]" at FourBitAdder.v(5) has no driver File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 5
+Info (12128): Elaborating entity "FourBitAdder" for hierarchy "AdderDisplay:plsWork|FourBitAdder:adder" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 30
 Warning (12125): Using design file FullAdder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: FullAdder File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FullAdder.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at FullAdder.v(9): created implicit net for "sum_out" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FullAdder.v Line: 9
-Info (12128): Elaborating entity "FullAdder" for hierarchy "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder1" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at FullAdder.v(9): object "sum_out" assigned a value but never read File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FullAdder.v Line: 9
-Warning (10034): Output port "sum" at FullAdder.v(5) has no driver File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FullAdder.v Line: 5
-Warning (12125): Using design file HexSign.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: HexSign File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/HexSign.v Line: 5
-Info (12128): Elaborating entity "HexSign" for hierarchy "AdderDisplay:plsWork|HexSign:checkSign1" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 43
-Warning (10230): Verilog HDL assignment warning at HexSign.v(28): truncated value with size 9 to match size of target (8) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/HexSign.v Line: 28
+Info (12128): Elaborating entity "FullAdder" for hierarchy "AdderDisplay:plsWork|FourBitAdder:adder|FullAdder:adder1" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/FourBitAdder.v Line: 14
 Warning (12125): Using design file HexNumbers.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: HexNumbers File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/HexNumbers.v Line: 5
-Info (12128): Elaborating entity "HexNumbers" for hierarchy "AdderDisplay:plsWork|HexNumbers:setValue1" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 44
-Warning (10230): Verilog HDL assignment warning at HexNumbers.v(40): truncated value with size 9 to match size of target (8) File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/HexNumbers.v Line: 40
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "HexNumbers" for hierarchy "AdderDisplay:plsWork|HexNumbers:sig" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/AdderDisplay.v Line: 37
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
     Warning (13410): Pin "HEX0[7]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 14
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 15
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 16
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 16
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 16
     Warning (13410): Pin "HEX2[7]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 16
     Warning (13410): Pin "HEX3[0]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 17
     Warning (13410): Pin "HEX3[1]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 17
@@ -456,9 +354,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 17
     Warning (13410): Pin "HEX3[5]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 17
     Warning (13410): Pin "HEX3[7]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 17
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 18
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 18
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 18
     Warning (13410): Pin "HEX4[7]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 18
     Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 19
     Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 19
@@ -470,28 +365,19 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_CLK_10" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 9
     Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 10
     Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 11
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 22
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 22
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/dafna/DE10/Lab1/DesignBlock2/Complete/Complete.v Line: 26
-Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 982 megabytes
-    Info: Processing ended: Sat Oct  5 15:20:53 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 36 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 970 megabytes
+    Info: Processing ended: Sun Oct  6 22:03:57 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:14
 
 

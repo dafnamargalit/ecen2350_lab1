@@ -8,7 +8,7 @@ module HexNumbers(
 );
 
 
-reg [8:0] out;
+reg [7:0] out;
 
 //=======================================================
 //  Structural coding
@@ -32,7 +32,7 @@ reg [8:0] out;
             4'b1100: out <= 8'b11000110;//c
             4'b1101: out <= 8'b10100001;//d
             4'b1110: out <= 8'b10000110;//E
-            4'b1111: out <= 8'b10010000;//F
+            4'b1111: out <= 8'b10001110;//F
             default: out <= 8'b11111111;//off
         endcase
     end

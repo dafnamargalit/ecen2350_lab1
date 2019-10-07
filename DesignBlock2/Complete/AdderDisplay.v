@@ -4,9 +4,7 @@
 //=======================================================
 
 module AdderDisplay(
-    input [3:0] input_x,
-    input [3:0] input_y,
-    input [9:0] SW,
+    input [7:0] SW,
 	//////////// SEG7 //////////
 	output		     [7:0]		HEX0,
 	output		     [7:0]		HEX1,
@@ -19,43 +17,78 @@ module AdderDisplay(
 	input 		     [1:0]		KEY
 );
 
-wire [3:0] sign1;
-wire [3:0] value1;
-wire [3:0] sign2;
-wire [3:0] value2;
-wire [3:0] of;
-wire [3:0] f;
-wire [3:0] sum;
-wire [3:0] sign_out;
-wire [3:0] sum_out;
+wire signed [3:0] input_x, input_y;
+wire [3:0] input1, input2;
+wire [3:0] sign1, sign2;
+wire overflow;
+wire signed [3:0] sum;
+wire [3:0] sign_out, sum_out;
 
-//if overflow, of
-// if positive, positive
-//if negative, negative sign, two's complement
+assign input_x = SW[7:4];
+assign input_y =  SW[3:0];
 
-FourBitAdder adder(.inputx (input_x), .inputy (input_y), 
- .SW (SW), .KEY (KEY), .overflow (overflow), .sum (sum));
+FourBitAdder adder(.carry_in (KEY[0]), .input_x (input_x), .input_y (input_y), .overflow (overflow), .sum (sum) );
 
 //Display Input 1
-assign sign1 = (input_x[0] == 1) ? 4'b1000 : 4'b0000;
-assign value1 = (input_x[0] == 1) ? value1 : -value1;
 
-HexSign checkSign1(.sign (sign1), .HEX (HEX5));
-HexNumbers setValue1(.NUM (value1), .HEX (HEX4));
+assign sign1 = (input_x[3] == 1) ? 4'b1001 : 4'b1011;
+assign input1 = (input_x[3] == 1) ? ~input_x + 1 : input_x;
+
+HexNumbers sig(.NUM (sign1), .HEX (HEX5));
+HexNumbers value1(.NUM (input1), .HEX (HEX4));
 
 //Display Input 2
-assign sign2 = (input_y[0] == 1) ? 4'b1000 : 4'b0000;
-assign value2 = (input_y[0] == 1) ? value2 : -value2;
 
-HexSign checkSign2(.sign (sign2), .HEX (HEX3));
-HexNumbers setValue2(.NUM (value2), .HEX (HEX2));
+assign sign2 = (input_y[3] == 1) ? 4'b1001 : 4'b1011;
+assign input2 = (input_y[3] == 1) ? ~input_y + 1 : input_y;
 
-//Display Overflow
+HexNumbers sign(.NUM (sign2), .HEX (HEX3));
+HexNumbers value2(.NUM (input2), .HEX (HEX2));
 
-assign sign_out = overflow ? (4'b0001) : sum[0] ? 4'b1000 : 4'b0000;
-assign sum_out = overflow ? (4'b1111) : sum[0] ? -sum : sum;
+//Display Sum or Overflow
 
-HexSign signage(.sign (sign_out), .HEX (HEX1));
-HexNumbers value(.NUM (sum_out), .HEX (HEX0));
+assign sign_out = overflow ? 4'b000 : (sum[3] == 1) ? 4'b1001 : 4'b1011;
+assign sum_out = overflow ? 4'b1111 : (sum[3] == 1) ? ~sum + 1 : sum;
+
+HexNumbers signout(.NUM (sign_out), .HEX (HEX1));
+HexNumbers sumout(.NUM (sum_out), .HEX (HEX0));
+
+
+
+// wire signed overflow;
+// wire signed [3:0] input_x;
+// wire signed [3:0] input_y;
+// wire [3:0] sign1;
+// wire signed [3:0] value1;
+// wire [3:0] sign2;
+// wire signed [3:0] value2;
+// wire signed [3:0] sum;
+// wire signed [3:0] sign_out;
+// wire signed [3:0] sum_out;
+
+// FourBitAdder adder(.input_x (input_x), .input_y (input_y), 
+//   .KEY (KEY), .overflow (overflow), .sum (sum));
+
+// //Display Input 1
+// assign sign1 = (input_x[3] == 1) ? 4'b1000 : 4'b0000;
+// assign value1 = (input_x[3] == 1) ? ~input_x + 1'b1: input_x;
+
+// HexSign checkSign1(.sign (sign1), .HEX (HEX5));
+// HexNumbers setValue1(.NUM (value1), .HEX (HEX4));
+
+// //Display Input 2
+// assign sign2 = (input_y[3] == 1) ? 4'b1000 : 4'b0000;
+// assign value2 = (input_y[3] == 1) ? (~input_y + 1'b1) : input_y;
+
+// HexSign checkSign2(.sign (sign2), .HEX (HEX3));
+// HexNumbers setValue2(.NUM (value2), .HEX (HEX2));
+
+// //Display Overflow
+
+// assign sign_out = overflow ? (4'b0001) : (sum[3] == 1) ? 4'b1000 : 4'b0000;
+// assign sum_out = overflow ? (4'b1111) : (sum[3] == 1) ? (~sum) : sum;
+
+// HexSign signage(.sign (sign_out), .HEX (HEX1));
+// HexNumbers value(.NUM (sum_out),  .HEX (HEX0));
 
 endmodule

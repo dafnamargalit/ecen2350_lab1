@@ -22,12 +22,11 @@ module Complete(
 	input 		     [1:0]		KEY,
 
 	//////////// SW //////////
-	input 		     [9:0]		SW
+	input 		     [7:0]		SW
 );
 
 AdderDisplay plsWork(
-	.input_x (SW[7:4]), 
-	.input_y (SW[3:0]), 
+	.SW (SW),
 	.HEX0 (HEX0),
 	.HEX1 (HEX1),
 	.HEX2 (HEX2),
